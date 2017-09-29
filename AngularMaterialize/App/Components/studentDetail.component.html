@@ -1,0 +1,52 @@
+﻿<div class="row">
+    <form class="col s12">
+        <div class="row">
+            <span>Edit Student Detail</span>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="id" class="validate" type="text" ng-value="$ctrl.student.id" />
+                <label for="id">Student Id</label>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="name" class="validate" type="text" ng-model="$ctrl.student.name" />
+                <label for="name" class="active">Name</label>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="age" class="validate" type="number" step="1" ng-model="$ctrl.student.age" />
+                <label for="age" class="active">Age</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <select
+                        data-ng-model="$ctrl.student.homeState"
+                        data-ng-options="state for state in $ctrl.stateList">
+                    <option value="">-- state --</option>
+                </select>
+                <label class="active">State</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                
+                <textarea id="comment" class="materialize-textarea" ng-model="$ctrl.student.comment"></textarea>
+                <label for="comment" class="active">Comment</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="waves-effect waves-light btn" ng-click="$ctrl.ok()">Ok</button>
+            <button class="waves-effect waves-light btn" ng-click="$ctrl.cancel()">Cancel</button>
+        </div>
+</form>
+</div>

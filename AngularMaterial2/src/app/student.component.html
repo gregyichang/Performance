@@ -1,0 +1,26 @@
+﻿<div (mouseover)="setCurrentStudent(true)" (mouseleave)="setCurrentStudent(false)">
+    <span>Current Viewing: {{isViewing}}</span>
+    <md-form-field>
+        <input type="text" mdInput [(ngModel)]="stValue.id" placeholder="Student Id"/>
+    </md-form-field>
+
+    <md-form-field>
+        <input type="text" mdInput [(ngModel)]="stValue.name" placeholder="Name" />
+    </md-form-field>
+
+    <md-form-field>
+        <input type="number" mdInput step="1" [(ngModel)]="stValue.age" placeholder="Age" />
+    </md-form-field>
+
+    <div>
+        <md-select [(ngModel)]="stValue.homeState" placeholder="State" >
+            <md-option *ngFor="let state of stateList" [value]="state">
+                {{state}}
+            </md-option>
+        </md-select>
+    </div>
+
+    <md-form-field>
+        <textarea mdInput [(ngModel)]="stValue.comment" style="height: 80px; max-height: 80px;" placeholder="Comment"></textarea>
+    </md-form-field>
+</div>

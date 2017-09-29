@@ -1,0 +1,38 @@
+﻿<div class="modal-header">
+    <span>Edit Student Detail</span>
+</div>
+<div class="modal-body">
+    <div class="form-group">
+        <label>Student Id</label>
+        <input class="form-control" type="text" [(ngModel)]="student.id" />
+    </div>
+
+    <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" type="text" [(ngModel)]="student.name" />
+    </div>
+
+    <div class="form-group">
+        <label>Age</label>
+        <input class="form-control" type="number" step="1" [(ngModel)]="student.age" />
+    </div>
+
+    <div class="form-group">
+        <label>State</label>
+        <select class="form-control"
+                [(ngModel)]="student.homeState"
+                data-ng-options="state for state in $ctrl.stateList">
+            <option *ngFor="let state of stateList" [value]="state">{{state}}</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Comment</label>
+        <textarea class="form-control" [(ngModel)]="student.comment" style="height: 400px; max-height: 400px; width: 570px;"></textarea>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="bsModalRef.hide()">Ok</button>
+    <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">Cancel</button>
+</div>

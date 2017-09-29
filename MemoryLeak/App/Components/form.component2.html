@@ -1,0 +1,43 @@
+﻿<button ng-click="$ctrl.navigates()">To Form 1</button>
+
+<div>
+    <div ng-repeat="s in $ctrl.students track by s.id">
+        <span>{{s.id}}</span>
+    </div><br />
+    <div ng-repeat="s in $ctrl.students track by s.id">
+        <span>{{s.name}}</span>
+    </div><br />
+    <div ng-repeat="s in $ctrl.students track by s.id">
+        <span>{{s.homeState}}</span>
+    </div><br />
+    <div ng-repeat="s in $ctrl.students track by s.id">
+        <span>{{s.comment}}</span>
+    </div><br />
+</div>
+
+<!--<div>
+    <uib-tabset active="active">
+        <uib-tab index="0" heading="Id">
+            <div ng-repeat="s in $ctrl.students track by s.id">
+                <span>{{s.id}}</span>
+            </div><br />
+            
+        </uib-tab>
+        <uib-tab index="1" heading="Name">
+            <div ng-repeat="s in $ctrl.students track by s.id">
+                <span>{{s.name}}</span>
+            </div><br />
+        </uib-tab>
+        <uib-tab index="2" heading="State">
+            <div ng-repeat="s in $ctrl.students track by s.id">
+                <span>{{s.homeState}}</span>
+            </div><br />
+        </uib-tab>
+        <uib-tab index="3" heading="Comment">
+            <div ng-repeat="s in $ctrl.students track by s.id">
+                <span>{{s.comment}}</span>
+            </div><br />
+        </uib-tab>
+    </uib-tabset>
+</div>-->
+

@@ -1,0 +1,38 @@
+﻿<div class="row" ng-mouseover="$ctrl.setCurrentStudent(true)" ng-mouseleave="$ctrl.setCurrentStudent(false)">
+    <!--<form class="col s12">-->
+        <span>Current Viewing: {{$ctrl.isViewing}}</span>
+        <div class="row">
+            
+            <div class="input-field col s3">
+                <input ng-attr-id="id{{::$ctrl.stValue.id}}" class="validate" type="text" ng-model="$ctrl.stValue.id" />
+                <label for="id{{::$ctrl.stValue.id}}" class="active">Student Id</label>
+            </div>
+
+            <div class="input-field col s3">
+                <input ng-attr-id="name{{::$ctrl.stValue.id}}" class="validate" type="text" ng-model="$ctrl.stValue.name" />
+                <label for="name{{::$ctrl.stValue.id}}" class="active">Name</label>
+            </div>
+
+            <div class="input-field col s3">
+                <input ng-attr-id="age{{::$ctrl.stValue.id}}" class="validate" type="number" step="1" ng-model="$ctrl.stValue.age" />
+                <label for="age{{::$ctrl.stValue.id}}" class="active">Age</label>
+            </div>
+
+            <div class="input-field col s3">
+                <select
+                        data-ng-model="$ctrl.stValue.homeState"
+                        data-ng-options="state for state in $ctrl.stateList">
+                    <option value="">-- state --</option>
+                </select>
+                <label class="active">State</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea ng-attr-id="comment{{::$ctrl.stValue.id}}" class="materialize-textarea" ng-model="$ctrl.stValue.comment"></textarea>
+                <label for="comment{$ctrl.stValue.id}}" class="active">Comment</label>
+                
+            </div>
+        </div>
+<!--</form>-->
+</div>

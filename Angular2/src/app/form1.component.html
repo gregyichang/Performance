@@ -1,0 +1,10 @@
+﻿<div>Form 1</div>
+
+<button type="button" class="btn navbar-btn" (click)="viewDetail()" >
+    Launch Detail Dialog
+</button>
+
+<div>
+    <student *ngFor="let s of students" [stValue]="s"></student>
+</div>
+

@@ -1,0 +1,17 @@
+﻿<div>
+    <h3>Test NG If</h3>
+
+    <md-button ng-click="$ctrl.navigates()">To Form 1</md-button>
+
+    <md-button ng-click="$ctrl.toggle()">Toggle</md-button>
+
+    <div ng-if="$ctrl.showList1">
+        <span>List 1</span>
+        <student ng-repeat="s in $ctrl.students track by s.id" st-value="s"></student>
+    </div>
+    
+    <div ng-if="!$ctrl.showList1">
+        <span>List 2</span>
+        <student ng-repeat="s in $ctrl.students track by s.id" st-value="s"></student>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Memory Leak</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=edge;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="expires" content="0">
+    
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/materialize/js/materialize.min.js"></script>
+
+    <script type="text/javascript" src="Scripts/AngularJS/Core/angular.js"></script>
+    <script type="text/javascript" src="Scripts/AngularJS/Core/angular-animate.js"></script>
+    <script type="text/javascript" src="Scripts/AngularJS/Core/angular-aria.js"></script>
+    <script type="text/javascript" src="Scripts/AngularJS/Core/angular-messages.js"></script>
+    <script type="text/javascript" src="Scripts/AngularJS/Core/angular-sanitize.js"></script>
+    <script type="text/javascript" src="Scripts/AngularJS/UIRouter/angular-ui-router.js"></script>
+
+    <script type="text/javascript" src="App/app.js"></script>
+    <script type="text/javascript" src="App/Components/form.component.js"></script>
+    <script type="text/javascript" src="App/Components/student.component.js"></script>
+    <script type="text/javascript" src="App/Components/form.component2.js"></script>
+    <script type="text/javascript" src="App/Components/studentDetail.component.js"></script>
+    <script type="text/javascript" src="App/Components/form.component3.js"></script>
+    
+
+    <link rel='stylesheet' href="Styles/AngularJS/Core/angular-csp.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="Scripts/materialize/css/materialize.min.css" media="screen,projection" />
+
+</head>
+<body>
+    <style type="text/css">
+        .tab-pane {
+            margin: 20px 20px;
+        }
+    </style>
+
+    <div ui-view></div>
+
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('select').material_select();
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<div (mouseover)="setCurrentStudent(true)" (mouseleave)="setCurrentStudent(false)">
+    <span>Current Viewing: {{isViewing}}</span>
+    <div class="row m-valign-wrapper">
+        <mz-input-container class="col s3 m5">
+            <input type="text" [(ngModel)]="stValue.id" [label]="'Student Id'"/>
+        </mz-input-container>
+
+        <mz-input-container class="col s3 m5">
+            <input type="text" [(ngModel)]="stValue.name" [label]="'Name'" />
+        </mz-input-container>
+
+        <mz-input-container class="col s3 m5">
+            <input type="number" step="1" [(ngModel)]="stValue.age" [label]="'Age'" />
+        </mz-input-container>
+
+        <mz-select-container class="col s3 m5">
+            <select 
+                    [label]="'State'"
+                    [(ngModel)]="stValue.homeState">
+                >
+                <option *ngFor="let state of stateList" [value]="state">{{state}}</option>
+            </select>
+        </mz-select-container>
+    </div>
+    <div class="row m-valign-wrapper">
+        <mz-textarea-container class="col s12 m5">
+            <label>Comment</label>
+            <textarea  [(ngModel)]="stValue.comment"  [label]="'Comment'" ></textarea>
+        </mz-textarea-container>
+    </div>
+</div>

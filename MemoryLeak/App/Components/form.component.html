@@ -1,0 +1,8 @@
+﻿<div>
+    <button ng-click="$ctrl.navigates()">To Form 2</button>
+    <button ng-click="$ctrl.viewDetails()">Launch Detail dialog</button>
+    <button ng-click="$ctrl.testNgIf()">Go to ngIf test</button>
+
+    <student ng-repeat="s in $ctrl.students track by s.id" st-value="s"></student>
+</div>
+

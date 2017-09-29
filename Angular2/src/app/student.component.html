@@ -1,0 +1,30 @@
+﻿<div (mouseover)="setCurrentStudent(true)" (mouseleave)="setCurrentStudent(false)">
+    <span>Current Viewing: {{isViewing}}</span>
+    <div class="form-group">
+        <label>Student Id</label>
+        <input type="text" class="form-control" [(ngModel)]="stValue.id" />
+    </div>
+
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" [(ngModel)]="stValue.name" />
+    </div>
+
+    <div class="form-group">
+        <label>Age</label>
+        <input type="number" class="form-control" step="1" [(ngModel)]="stValue.age" />
+    </div>
+
+    <div class="form-group">
+        <label>State</label>
+        <select class="form-control"
+                [(ngModel)]="stValue.homeState" >>
+            <option *ngFor="let state of stateList" [value]="state">{{state}}</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Comment</label>
+        <textarea class="form-control" [(ngModel)]="stValue.comment" style="height: 80px; max-height: 80px;" placeholder="Comment"></textarea>
+    </div>
+</div>

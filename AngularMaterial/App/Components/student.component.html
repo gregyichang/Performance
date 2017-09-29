@@ -1,0 +1,31 @@
+﻿<div ng-mouseover="$ctrl.setCurrentStudent(true)" ng-mouseleave="$ctrl.setCurrentStudent(false)">
+    <span>Current Viewing: {{$ctrl.isViewing}}</span>
+    <md-input-container>
+        <label>Student Id</label>
+        <input type="text" ng-model="$ctrl.stValue.id" />
+    </md-input-container>
+
+    <md-input-container>
+        <label>Name</label>
+        <input type="text" ng-model="$ctrl.stValue.name" />
+    </md-input-container>
+
+    <md-input-container>
+        <label>Age</label>
+        <input type="number" step="1" ng-model="$ctrl.stValue.age" />
+    </md-input-container>
+
+    <md-input-container>
+        <label>State</label>
+        <md-select data-ng-model="$ctrl.stValue.homeState">
+            <md-option ng-repeat="state in $ctrl.stateList track by state" ng-value="state">
+                {{state}}
+            </md-option>
+        </md-select>
+    </md-input-container>
+
+    <md-input-container>
+        <label>Comment</label>
+        <textarea ng-model="$ctrl.stValue.comment" style="height: 80px; max-height: 80px;"></textarea>
+    </md-input-container>
+</div>

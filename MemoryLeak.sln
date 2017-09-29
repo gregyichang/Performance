@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular", "MemoryLeak\Angular.csproj", "{54B6E64C-08E7-4A41-BC43-2A39858544B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularMaterial", "AngularMaterial\AngularMaterial.csproj", "{07E76BCE-B3B1-4A0F-84E7-574AFE3B27F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularMaterial2", "AngularMaterial2\AngularMaterial2.csproj", "{EE635D73-981B-4912-8679-294B08603DEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular2", "Angular2\Angular2.csproj", "{43E3AB22-DD53-4AD8-A6AF-E6F3756A58B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularMaterialize", "AngularMaterialize\AngularMaterialize.csproj", "{48E5CBB7-24E8-417A-B47F-47308E1A53EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularMaterialize2", "AngularMaterialize2\AngularMaterialize2.csproj", "{30523D14-ACF7-40DA-ACDC-3A99B8AD6064}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54B6E64C-08E7-4A41-BC43-2A39858544B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B6E64C-08E7-4A41-BC43-2A39858544B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B6E64C-08E7-4A41-BC43-2A39858544B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B6E64C-08E7-4A41-BC43-2A39858544B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07E76BCE-B3B1-4A0F-84E7-574AFE3B27F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E76BCE-B3B1-4A0F-84E7-574AFE3B27F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E76BCE-B3B1-4A0F-84E7-574AFE3B27F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E76BCE-B3B1-4A0F-84E7-574AFE3B27F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE635D73-981B-4912-8679-294B08603DEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE635D73-981B-4912-8679-294B08603DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE635D73-981B-4912-8679-294B08603DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE635D73-981B-4912-8679-294B08603DEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43E3AB22-DD53-4AD8-A6AF-E6F3756A58B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43E3AB22-DD53-4AD8-A6AF-E6F3756A58B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43E3AB22-DD53-4AD8-A6AF-E6F3756A58B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43E3AB22-DD53-4AD8-A6AF-E6F3756A58B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E5CBB7-24E8-417A-B47F-47308E1A53EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E5CBB7-24E8-417A-B47F-47308E1A53EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E5CBB7-24E8-417A-B47F-47308E1A53EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E5CBB7-24E8-417A-B47F-47308E1A53EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30523D14-ACF7-40DA-ACDC-3A99B8AD6064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30523D14-ACF7-40DA-ACDC-3A99B8AD6064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30523D14-ACF7-40DA-ACDC-3A99B8AD6064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30523D14-ACF7-40DA-ACDC-3A99B8AD6064}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
