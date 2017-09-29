@@ -3,8 +3,6 @@ import { Observable } from 'rxjs/Observable';
 import { Component, HostBinding, OnInit, TemplateRef  } from '@angular/core';
 import { Router }                 from '@angular/router';
 
-import { BsModalService } from 'ngx-bootstrap/modal';
-import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 
 import { Student } from './student';
 import { studentDetailComponent } from './studentDetail.Component';
@@ -16,10 +14,8 @@ import { studentDetailComponent } from './studentDetail.Component';
 export class form1Component implements OnInit{
     //students: Observable<Student[]>;
     students: Student[] = [];
-    public modalRef: BsModalRef;
     
     constructor(
-        private modalService: BsModalService
     ) { }
 
     ngOnInit() {
@@ -40,8 +36,6 @@ export class form1Component implements OnInit{
         var viewId = Math.floor((Math.random() * 10) + 1);
         var studentToView = this.students[viewId];
 
-        this.modalRef = this.modalService.show(studentDetailComponent);
-        this.modalRef.content.student = studentToView;
     };
 
 }

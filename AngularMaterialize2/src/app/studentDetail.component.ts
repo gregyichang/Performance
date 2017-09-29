@@ -1,6 +1,4 @@
 ﻿import { Component, Input, OnInit } from '@angular/core';
-import { BsModalService } from 'ngx-bootstrap/modal';
-import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 
 import { Student } from './student';
 
@@ -12,7 +10,7 @@ import { Student } from './student';
 export class studentDetailComponent implements OnInit{
     public stateList: string[] = [];
     public student: Student;
-    constructor(public bsModalRef: BsModalRef) { }
+    constructor() { }
 
     ngOnInit() {
         this.student = new Student();
