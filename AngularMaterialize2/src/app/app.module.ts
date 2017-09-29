@@ -1,9 +1,10 @@
 import { BrowserModule }    from '@angular/platform-browser';
+import { CommonModule }     from '@angular/common';
 import { NgModule }         from '@angular/core';
 import { FormsModule }      from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import { MaterializeModule } from 'ng2-materialize';
+//import { MaterializeModule } from 'ng2-materialize';
 
 
 import { AppComponent }     from './app.component';
@@ -28,7 +29,7 @@ import { studentDetailComponent } from './studentDetail.Component';
       FormsModule,
       AppRoutingModule,
 
-      MaterializeModule.forRoot()
+      //MaterializeModule.forRoot()
   ],
   entryComponents: [studentDetailComponent],
   providers: [],

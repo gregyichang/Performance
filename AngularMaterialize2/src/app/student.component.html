@@ -1,4 +1,4 @@
-﻿<div (mouseover)="setCurrentStudent(true)" (mouseleave)="setCurrentStudent(false)">
+﻿<!--<div (mouseover)="setCurrentStudent(true)" (mouseleave)="setCurrentStudent(false)">
     <span>Current Viewing: {{isViewing}}</span>
     <div class="row m-valign-wrapper">
         <mz-input-container class="col s3 m5">
@@ -24,8 +24,40 @@
     </div>
     <div class="row m-valign-wrapper">
         <mz-textarea-container class="col s12 m5">
-            <label>Comment</label>
             <textarea  [(ngModel)]="stValue.comment"  [label]="'Comment'" ></textarea>
         </mz-textarea-container>
+    </div>
+</div>-->
+
+<div class="row" (mouseover)="setCurrentStudent(true)" (mouseleave)="setCurrentStudent(false)">
+    <span>Current Viewing: {{isViewing}}</span>
+    <div class="row">
+        <div class="input-field col s3">
+            <input [attr.id]="'id' +stValue.id" class="validate" type="text" [(ngModel)]="stValue.id" />
+            <label for="'id' +stValue.id" class="active">Student Id</label>
+        </div>
+
+        <div class="input-field col s3">
+            <input [attr.id]="'name' + stValue.id" class="validate" type="text" [(ngModel)]="stValue.name" />
+            <label for="'name' + stValue.id" class="active">Name</label>
+         </div>
+
+        <div class="input-field col s3">
+            <input [attr.id]="'age' + stValue.id" class="validate" type="number" step="1" [(ngModel)]="stValue.age" />
+            <label for="'age' + stValue.id" class="active">Age</label>
+         </div>
+
+        <div class="input-field col s3">
+            <select [(ngModel)]="stValue.homeState">
+                <option *ngFor="let state of stateList" [value]="state">{{state}}</option>
+            </select>
+            <label class="active">State</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <textarea  [attr.id]="'comment' + stValue.id" [(ngModel)]="stValue.comment" class="materialize-textarea"  ></textarea>
+            <label for="'comment' + stValue.id" class="active">Comment</label>
+        </div>
     </div>
 </div>
