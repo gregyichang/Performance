@@ -1,4 +1,4 @@
-﻿<div class="row">
+﻿<div class="modal-content">
     <form class="col s12">
         <div class="row">
             <span>Edit Student Detail</span>
@@ -7,7 +7,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <input id="id" class="validate" type="text" ng-value="$ctrl.student.id" />
-                <label for="id">Student Id</label>
+                <label for="id" class="active">Student Id</label>
             </div>
         </div>
         
@@ -27,7 +27,7 @@
 
         <div class="row">
             <div class="input-field col s12">
-                <select
+                <select id="homeState"
                         data-ng-model="$ctrl.student.homeState"
                         data-ng-options="state for state in $ctrl.stateList">
                     <option value="">-- state --</option>
@@ -44,9 +44,13 @@
             </div>
         </div>
 
-        <div class="row">
-            <button class="waves-effect waves-light btn" ng-click="$ctrl.ok()">Ok</button>
-            <button class="waves-effect waves-light btn" ng-click="$ctrl.cancel()">Cancel</button>
-        </div>
+        
 </form>
+</div>
+
+<div class="modal-footer">
+    <div class="row">
+        <button class="waves-effect waves-light btn" ng-click="$ctrl.closeDetail()">Ok</button>
+        <button class="waves-effect waves-light btn" ng-click="$ctrl.closeDetail()">Cancel</button>
+    </div>
 </div>

@@ -2,6 +2,8 @@
 import { Router }                 from '@angular/router';
 import { Student } from './student';
 
+declare var $: any
+
 @Component({
     templateUrl: './form2.component.html',
     styles: [':host { position: relative; bottom: 10%; }']
@@ -25,5 +27,10 @@ export class form2Component {
             student.comment = i.toString() + ":" + comm;
             this.students.push(student);
         }
+
+        $(document).ready(function () {
+            debugger
+            $('ul.tabs').tabs();
+        });
     }
 }
