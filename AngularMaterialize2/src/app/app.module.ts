@@ -31,7 +31,7 @@ import { studentDetailComponent } from './studentDetail.Component';
 
       //MaterializeModule.forRoot()
   ],
-  entryComponents: [studentDetailComponent],
+  //entryComponents: [studentDetailComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

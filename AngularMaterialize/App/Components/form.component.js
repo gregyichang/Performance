@@ -13,7 +13,7 @@
     function formController($location, $timeout) {
         var vm = this;
         vm.students = [];
-        vm.displayDetail = true;
+        vm.displayDetail = false;
         vm.detailTemplate = "App/Components/studentDetail.component.html";
 
         vm.navigates = function() {
@@ -24,21 +24,20 @@
             $location.url("/form3");
         };
 
-        vm.viewDetails = function() {
+        vm.viewDetails = function () {
+            vm.displayDetail = true;
             var viewId = Math.floor((Math.random() * 10) + 1);
             vm.student = vm.students[viewId];
 
             vm.displayDetail = true;
             $('#studentDetail').modal("open");
-            //$("#homeState").material_select()
-            //$("#homeState").trigger('contentChanged');
         }
 
         vm.closeDetail = function () {
             vm.student = null;
 
             $('#studentDetail').modal("close");
-            //vm.displayDetail = false;
+            vm.displayDetail = false;
         }
 
         vm.stateList = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois',
@@ -53,30 +52,18 @@
                 vm.students.push({ id: i, name: 'name' + i, age: Math.floor((Math.random() * 100) + 1), homeState: 'Texas', comment: i + ":" + comm });
             }
 
-            $timeout(function () {
+            vm.timer = $timeout(function () {
                 $("select").material_select();
                 $('.modal').modal({
                     dismissible: false
                 });
-
-                var suspend = false;
-                $('#homeState').on('change', function () {
-                    
-                    if (!suspend) {
-                        suspend = true;
-                        var event = new CustomEvent('change', {
-                            detail: 'change',
-                            bubbles: true
-                        });
-                        $(this).get(0).dispatchEvent(event);
-                    } else {
-                        suspend = false;
-                    }
-                });
-
             }, 0);
         };
 
+        vm.$destroy = function () {
+            $timeout.cancel(vm.timer);
+            vm.timer = null;
+        }
     }
 
 })(angular.module("memApp"));

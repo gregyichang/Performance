@@ -16,6 +16,7 @@ declare var $: any
 export class form1Component implements OnInit{
     //students: Observable<Student[]>;
     students: Student[] = [];
+    student: Student = null;
     
     constructor(
     ) { }
@@ -33,15 +34,23 @@ export class form1Component implements OnInit{
             this.students.push(student);
         }
 
-        setTimeout(function () {
+        var t = setTimeout(function () {
             $("select").material_select();
+
+            $('.modal').modal({
+                dismissible: false
+            });
+
+            clearTimeout(t);
         }, 0);
     }
 
     viewDetail() {
         var viewId = Math.floor((Math.random() * 10) + 1);
-        var studentToView = this.students[viewId];
-
+        this.student = this.students[viewId];
+        $('#studentDetail').modal("open");
     };
+
+    
 
 }
