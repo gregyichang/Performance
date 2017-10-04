@@ -1,6 +1,6 @@
 ﻿import 'rxjs/add/operator/switchMap';
 import { Observable } from 'rxjs/Observable';
-import { Component, HostBinding, OnInit, TemplateRef  } from '@angular/core';
+import { Component, HostBinding, OnInit, OnDestroy, TemplateRef  } from '@angular/core';
 import { Router }                 from '@angular/router';
 
 
@@ -13,7 +13,7 @@ declare var $: any
     templateUrl: './form1.component.html',
     styles: [':host { position: relative; bottom: 10%; }']
 })
-export class form1Component implements OnInit{
+export class form1Component implements OnInit, OnDestroy{
     //students: Observable<Student[]>;
     students: Student[] = [];
     student: Student = null;
@@ -43,6 +43,10 @@ export class form1Component implements OnInit{
 
             clearTimeout(t);
         }, 0);
+    }
+
+    ngOnDestroy() {
+        $("select").material_select("destroy");
     }
 
     viewDetail() {

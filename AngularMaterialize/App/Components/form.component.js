@@ -71,6 +71,8 @@
         vm.$onDestroy = function () {
             $timeout.cancel(vm.timer);
             vm.timer = null;
+
+            $("select").material_select("destroy");
         }
     }
 
