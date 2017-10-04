@@ -25,11 +25,15 @@
                 vm.students.push({ id: i, name: 'name' + i, age: Math.floor((Math.random() * 100) + 1), homeState: 'Texas', comment: i + ":" + comm });
             }
 
-            $timeout(function () {
+            vm.timer = $timeout(function () {
                 $('ul.tabs').tabs();
             }, 0);
         };
 
+        vm.$onDestroy = function () {
+            $timeout.cancel(vm.timer);
+            vm.timer = null;
+        }
     }
 
 })(angular.module("memApp"));

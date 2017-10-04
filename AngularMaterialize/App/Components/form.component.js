@@ -30,7 +30,15 @@
             vm.student = vm.students[viewId];
 
             vm.displayDetail = true;
-            $('#studentDetail').modal("open");
+            
+
+            var timerDEtail = $timeout(function () {
+                $('#studentDetail').modal("open");
+                $("#homeState").material_select();
+               
+                $timeout.cancel(timerDEtail);
+                timerDEtail = null;
+            }, 0);
         }
 
         vm.closeDetail = function () {
@@ -57,10 +65,10 @@
                 $('.modal').modal({
                     dismissible: false
                 });
-            }, 0);
+            }, 1);
         };
 
-        vm.$destroy = function () {
+        vm.$onDestroy = function () {
             $timeout.cancel(vm.timer);
             vm.timer = null;
         }

@@ -48,7 +48,12 @@ export class form1Component implements OnInit{
     viewDetail() {
         var viewId = Math.floor((Math.random() * 10) + 1);
         this.student = this.students[viewId];
-        $('#studentDetail').modal("open");
+        
+       var t = setTimeout(function () {
+           $('#studentDetail').modal("open");
+           $("#homeState").material_select();
+           clearTimeout(t);
+        }, 0);
     };
 
     
