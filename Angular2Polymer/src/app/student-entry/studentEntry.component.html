@@ -1,0 +1,43 @@
+<form #ngForm="ngForm" (mouseover)="setCurrentStudent(true)" (mouseleave)="setCurrentStudent(false)">
+    <div class="form-group">
+        <span>Current Viewing: {{isViewing}}</span>
+        <div>
+            <b>{{stValue.id}}</b>:
+            <span>{{stValue.name}}</span>
+            of age
+            <span>{{stValue.age}}</span>
+            , from
+            <span>{{stValue.homeState}}</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <paper-input ironControl [(ngModel)]="stValue.id" label="Student Id" name="id"></paper-input>
+    </div>
+
+    <div class="form-group">
+        <paper-input ironControl [(ngModel)]="stValue.name" label="Name" name="name"></paper-input>
+    </div>
+
+    <div class="form-group">
+        <paper-input ironControl [(ngModel)]="stValue.age" label="Age" name="age"></paper-input>
+    </div>
+
+    <div class="form-group">
+        <!-- <paper-dropdown-menu ironControl [(ngModel)]="stValue.homeState" [ironSelector]="listbox">
+            <paper-listbox #listbox attr-for-selected="value">
+                <paper-item *ngFor="let state of stateList" [value]="state"></paper-item>
+            </paper-listbox>
+        </paper-dropdown-menu> -->
+        <label>State</label>
+        <select class="form-control" name="state"
+                [(ngModel)]="stValue.homeState" >>
+            <option *ngFor="let state of stateList" [value]="state">{{state}}</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Comment</label>
+        <textarea class="form-control" [(ngModel)]="stValue.comment" style="height: 80px; max-height: 80px;" placeholder="Comment" name="comment"></textarea>
+    </div>
+</form>

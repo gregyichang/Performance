@@ -1,0 +1,11 @@
+*:first-child {
+    clear: left;
+}
+
+.form-group {
+    float: left;
+    width: 200px;
+    max-width: 360 px;
+    max-height: 300 px;
+    margin-right: 1em;
+}

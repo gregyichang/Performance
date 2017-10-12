@@ -1,0 +1,40 @@
+<style type="text/css">
+    .maxWidth360 {
+        display: inline-block;
+        max-width: 360px;
+        max-height: 100%;
+        overflow-y: auto;
+        vertical-align: top;
+        margin-right: 2em;
+
+    }
+    .maxWidth360 span {
+        display:block;
+    }
+</style>
+
+<div>Form 2</div>
+<span>There are {{students.length}} students</span>
+<div>
+    <div class="maxWidth360">
+        <div *ngFor="let s of students">
+            <span>{{s.id}}</span>
+        </div>
+    </div>
+    <div class="maxWidth360">
+        <div *ngFor="let s of students">
+        <span>{{s.name}}</span>
+        </div>
+    </div>
+    <div class="maxWidth360">
+        <div *ngFor="let s of students">
+            <span>{{s.homeState}}</span>
+        </div><br />
+    </div>
+    <div class="maxWidth360">
+        <div *ngFor="let s of students" class="maxWidth360">
+            <span>{{s.comment}}</span>
+        </div><br />
+    </div>
+</div>
+
