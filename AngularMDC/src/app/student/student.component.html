@@ -1,0 +1,33 @@
+<div class="row" ng-mouseover="$ctrl.setCurrentStudent(true)" ng-mouseleave="$ctrl.setCurrentStudent(false)">
+		<!--<form class="col s12">-->
+			<!-- <i>{{$ctrl.stValue.id}}, {{$ctrl.stValue.name}}, {{$ctrl.stValue.age}}, {{$ctrl.stValue.homeState}}</i> -->
+			<span>Current Viewing: {{$ctrl.isViewing}}</span>
+			<div class="row">
+				<mdc-textfield>
+					<input name="id" type="text" ng-model="$ctrl.stValue.id" />
+					<label>Student Id</label>
+				</mdc-textfield>
+	
+				<mdc-textfield>
+					<input  type="text" ng-model="$ctrl.stValue.name" />
+					<label >Name</label>
+				</mdc-textfield>
+	
+				<mdc-textfield>
+					<input type="number" step="1" ng-model="$ctrl.stValue.age" />
+					<label>Age</label>
+				</mdc-textfield>
+	
+				<mdc-select prompt="State" ng-model="$ctrl.stValue.homeState">
+					<option ng-repeat="state in $ctrl.stateList" value="{{state}}">{{state}}</option>
+					<option value="">--state--</option>
+				</mdc-select>
+
+				<mdc-textfield>
+					<textarea rows="3" cols="40" ng-model="$ctrl.stValue.comment"></textarea>
+					<label>Comment</label>
+				</mdc-textfield>
+			</div>
+	<!--</form>-->
+	</div>
+	

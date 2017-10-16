@@ -1,0 +1,16 @@
+<button class="waves-effect waves-light btn" ng-click="$ctrl.navigates()">To Form 1</button>
+
+<div>
+    <div ng-repeat="s in $ctrl.students track by s.id">
+        <span>{{s.id}}</span>
+    </div><br />
+    <div ng-repeat="s in $ctrl.students track by s.id">
+        <span>{{s.name}}</span>
+    </div><br />
+    <div ng-repeat="s in $ctrl.students track by s.id">
+        <span>{{s.homeState}}</span>
+    </div><br />
+    <div ng-repeat="s in $ctrl.students track by s.id">
+        <span>{{s.comment}}</span>
+    </div><br />
+</div>
