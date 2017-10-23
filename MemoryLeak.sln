@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularMaterialize", "Angul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularMaterialize2", "AngularMaterialize2\AngularMaterialize2.csproj", "{30523D14-ACF7-40DA-ACDC-3A99B8AD6064}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCW-Angular2", "MCW-Angular2\MCW-Angular2.csproj", "{E67400AC-2A83-42B2-880C-B90B6D89DF99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{30523D14-ACF7-40DA-ACDC-3A99B8AD6064}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30523D14-ACF7-40DA-ACDC-3A99B8AD6064}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30523D14-ACF7-40DA-ACDC-3A99B8AD6064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E67400AC-2A83-42B2-880C-B90B6D89DF99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E67400AC-2A83-42B2-880C-B90B6D89DF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E67400AC-2A83-42B2-880C-B90B6D89DF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E67400AC-2A83-42B2-880C-B90B6D89DF99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
