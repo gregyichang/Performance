@@ -1,38 +1,55 @@
-﻿<div class="modal-header">
-    <span>Edit Student Detail</span>
-</div>
-<div class="modal-body">
-    <div class="form-group">
-        <label>Student Id</label>
-        <input class="form-control" type="text" [(ngModel)]="student.id" />
-    </div>
+﻿<div class="modal-content">
+    <div class="col s12">
+        <div class="row">
+            <span>Edit Student Detail</span>
+        </div>
 
-    <div class="form-group">
-        <label>Name</label>
-        <input class="form-control" type="text" [(ngModel)]="student.name" />
-    </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="id" class="validate" type="text" [value]="student.id" />
+                <label for="id" class="active">Student Id</label>
+            </div>
+        </div>
 
-    <div class="form-group">
-        <label>Age</label>
-        <input class="form-control" type="number" step="1" [(ngModel)]="student.age" />
-    </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="name" class="validate" type="text" [(ngModel)]="student.name" />
+                <label for="name" class="active">Name</label>
+            </div>
+        </div>
 
-    <div class="form-group">
-        <label>State</label>
-        <select class="form-control"
-                [(ngModel)]="student.homeState"
-                data-ng-options="state for state in $ctrl.stateList">
-            <option *ngFor="let state of stateList" [value]="state">{{state}}</option>
-        </select>
-    </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="age" class="validate" type="number" step="1" [(ngModel)]="student.age" />
+                <label for="age" class="active">Age</label>
+            </div>
+        </div>
 
-    <div class="form-group">
-        <label>Comment</label>
-        <textarea class="form-control" [(ngModel)]="student.comment" style="height: 400px; max-height: 400px; width: 570px;"></textarea>
+        <div class="row">
+            <div class="input-field col s12">
+                <select id="homeState"
+                        [(ngModel)]="student.homeState">
+                    <option *ngFor="let state of stateList" [value]="state">{{state}}</option>
+                </select>
+                <label class="active">State</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+
+                <textarea id="comment" class="materialize-textarea" [(ngModel)]="student.comment"></textarea>
+                <label for="comment" class="active">Comment</label>
+            </div>
+        </div>
+
+
     </div>
 </div>
 
 <div class="modal-footer">
-    <button type="button" class="btn btn-primary" (click)="bsModalRef.hide()">Ok</button>
-    <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">Cancel</button>
+    <div class="row">
+        <button class="waves-effect waves-light btn" (click)="closeDetail()">Ok</button>
+        <button class="waves-effect waves-light btn" (click)="closeDetail()">Cancel</button>
+    </div>
 </div>

@@ -1,0 +1,24 @@
+﻿<div>Form 1</div>
+
+<button mdc-button [raised]="true" (click)="viewDetail()">
+    Launch Detail Dialog
+</button>
+
+<div>
+    <student *ngFor="let s of students" [stValue]="s"></student>
+</div>
+
+<mdc-dialog #dialogscroll>
+    <mdc-dialog-header>
+        <mdc-dialog-header-title>
+            View Student Detail
+        </mdc-dialog-header-title>
+    </mdc-dialog-header>
+    <mdc-dialog-body [scrollable]="true">
+        <student-detail [student]="activeStudent"></student-detail>
+    </mdc-dialog-body>
+    <mdc-dialog-footer>
+        <button mdc-dialog-button [cancel]="true">Cancel</button>
+        <button mdc-dialog-button [accept]="true">Ok</button>
+    </mdc-dialog-footer>
+</mdc-dialog>

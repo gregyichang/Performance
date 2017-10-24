@@ -1,16 +1,41 @@
 ﻿<button class="waves-effect waves-light btn" ng-click="$ctrl.navigates()">To Form 1</button>
 
-<div>
-    <div ng-repeat="s in $ctrl.students track by s.id">
-        <span>{{s.id}}</span>
-    </div><br />
-    <div ng-repeat="s in $ctrl.students track by s.id">
-        <span>{{s.name}}</span>
-    </div><br />
-    <div ng-repeat="s in $ctrl.students track by s.id">
-        <span>{{s.homeState}}</span>
-    </div><br />
-    <div ng-repeat="s in $ctrl.students track by s.id">
-        <span>{{s.comment}}</span>
-    </div><br />
+<div class="row">
+    <div class="col s12">
+        <ul class="tabs">
+            <li class="tab col s3"><a href="#studentId" data-target="_self">Student Ids</a></li>
+            <li class="tab col s3"><a href="#studentName" data-target="_self">Student Names</a></li>
+            <li class="tab col s3"><a href="#studentState" data-target="_self">Home State</a></li>
+            <li class="tab col s2"><a href="#sudentComment" data-target="_self">Comments</a></li>
+            <!--<li class="tab col s1 disabled"><a href="#sudentComment">Other</a></li>-->
+        </ul>
+    </div>
+
+    <div>
+        <div id="studentId">
+            <div ng-repeat="s in $ctrl.students track by s.id" class="col s12">
+                <span>{{s.id}}</span>
+            </div><br />
+        </div>
+        
+        <div id="studentName" >
+            <div ng-repeat="s in $ctrl.students track by s.id" class="col s12">
+                <span>{{s.name}}</span>
+            </div><br />
+        </div>
+        
+        <div id="studentState" >
+            <div ng-repeat="s in $ctrl.students track by s.id" class="col s12">
+                <span>{{s.homeState}}</span>
+            </div><br />
+        </div>
+        
+
+        <div id="sudentComment" >
+            <div ng-repeat="s in $ctrl.students track by s.id" class="col s12">
+                <span>{{s.comment}}</span>
+            </div><br />
+        </div>
+    </div>
+
 </div>

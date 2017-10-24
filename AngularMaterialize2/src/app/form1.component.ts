@@ -1,6 +1,6 @@
 ﻿import 'rxjs/add/operator/switchMap';
 import { Observable } from 'rxjs/Observable';
-import { Component, HostBinding, OnInit, TemplateRef  } from '@angular/core';
+import { Component, HostBinding, OnInit, OnDestroy, TemplateRef  } from '@angular/core';
 import { Router }                 from '@angular/router';
 
 
@@ -13,9 +13,10 @@ declare var $: any
     templateUrl: './form1.component.html',
     styles: [':host { position: relative; bottom: 10%; }']
 })
-export class form1Component implements OnInit{
+export class form1Component implements OnInit, OnDestroy{
     //students: Observable<Student[]>;
     students: Student[] = [];
+    student: Student = null;
     
     constructor(
     ) { }
@@ -33,15 +34,32 @@ export class form1Component implements OnInit{
             this.students.push(student);
         }
 
-        setTimeout(function () {
+        var t = setTimeout(function () {
             $("select").material_select();
+
+            $('.modal').modal({
+                dismissible: false
+            });
+
+            clearTimeout(t);
         }, 0);
+    }
+
+    ngOnDestroy() {
+        $("select").material_select("destroy");
     }
 
     viewDetail() {
         var viewId = Math.floor((Math.random() * 10) + 1);
-        var studentToView = this.students[viewId];
-
+        this.student = this.students[viewId];
+        
+       var t = setTimeout(function () {
+           $('#studentDetail').modal("open");
+           $("#homeState").material_select();
+           clearTimeout(t);
+        }, 0);
     };
+
+    
 
 }

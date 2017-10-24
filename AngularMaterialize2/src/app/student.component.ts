@@ -9,7 +9,7 @@ import { Student } from './student';
 export class studentComponent implements OnInit{
     public stateList: string[] = [];
     private student: Student;
-    private isViewing: string;
+    public isViewing: string;
 
     @Input("stValue")
     set stValue(val: Student) {

@@ -6,11 +6,11 @@
         templateUrl: "App/Components/form.component2.html",
         bindings: { 
         },
-        controller: ["$location", form2Controller],
+        controller: ["$location", "$timeout",  form2Controller],
         controllerAs: "$ctrl"
     });
 
-    function form2Controller($location) {
+    function form2Controller($location, $timeout) {
         var vm = this;
         vm.students = [];
 
@@ -24,8 +24,16 @@
             for (var i = 1; i <= 500; i++) {
                 vm.students.push({ id: i, name: 'name' + i, age: Math.floor((Math.random() * 100) + 1), homeState: 'Texas', comment: i + ":" + comm });
             }
+
+            vm.timer = $timeout(function () {
+                $('ul.tabs').tabs();
+            }, 0);
         };
 
+        vm.$onDestroy = function () {
+            $timeout.cancel(vm.timer);
+            vm.timer = null;
+        }
     }
 
 })(angular.module("memApp"));
