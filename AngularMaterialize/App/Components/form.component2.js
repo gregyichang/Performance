@@ -6,11 +6,11 @@
         templateUrl: "App/Components/form.component2.html",
         bindings: { 
         },
-        controller: ["$location", "$timeout",  form2Controller],
+        controller: ["$location", "$timeout", "$element",  form2Controller],
         controllerAs: "$ctrl"
     });
 
-    function form2Controller($location, $timeout) {
+    function form2Controller($location, $timeout, $element) {
         var vm = this;
         vm.students = [];
 
@@ -24,15 +24,14 @@
             for (var i = 1; i <= 500; i++) {
                 vm.students.push({ id: i, name: 'name' + i, age: Math.floor((Math.random() * 100) + 1), homeState: 'Texas', comment: i + ":" + comm });
             }
-
-            vm.timer = $timeout(function () {
-                $('ul.tabs').tabs();
-            }, 0);
         };
 
+        vm.$postLink = function $postLink() {
+            $element.find('ul.tabs').tabs();
+        }
+
         vm.$onDestroy = function () {
-            $timeout.cancel(vm.timer);
-            vm.timer = null;
+            $element.find('ul.tabs').off();
         }
     }
 

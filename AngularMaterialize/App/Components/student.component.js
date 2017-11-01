@@ -7,11 +7,11 @@
         bindings: {
             stValue: '='
         },
-        controller: [studentController],
+        controller: ['$element', studentController],
         controllerAs: "$ctrl"
     });
 
-    function studentController() {
+    function studentController($element) {
         var vm = this;
 
         vm.isViewing = "No";
@@ -29,9 +29,13 @@
 
         };
 
-        //vm.$postLink = function () {
-        //    $('select').material_select();
-        //};
+        vm.$postLink = function $postLink() {
+           $element.find('select').material_select();
+        };
+
+        vm.$onDestroy = function $onDestroy() {
+            $element.find('select').material_select('destroy');
+        }
 
         //vm.$doCheck = function () {
         //    $('select').material_select();
